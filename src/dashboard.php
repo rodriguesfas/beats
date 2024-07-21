@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CodeIgniter log viewer</title>
+    <title>Beats|Dashboard</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -48,8 +48,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
-                <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> CodeIgniter Log Viewer</h1>
-                <p class="text-muted"><i>by <a href="https://github.com/SeunMatt" target="_blank">Seun Matt</a></i></p>
+                <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Beats Dashboard</h1>
+                <p class="text-muted"><i>by <a href="#" target="_blank">RodriguesFAS</a></i></p>
                 <div class="list-group">
                     <?php if (empty($files)) : ?>
                         <a class="list-group-item liv-active">No Log Files Found</a>

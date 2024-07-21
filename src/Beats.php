@@ -1,20 +1,13 @@
 <?php
 
-/**
- * Author: Seun Matt (https://github.com/SeunMatt)
- * Date: 09-Jan-18
- * Time: 4:30 AM
- */
-
-namespace CILogViewer;
+namespace Beats;
 
 defined('BASEPATH') or exit('No direct script access allowed');
-defined('APPPATH') or exit('Not a Code Igniter Environment');
+defined('APPPATH') or exit('Not a CodeIgniter Environment');
 
 
-class CILogViewer
+class Beats
 {
-
     private $CI;
 
     private static $levelsIcon = [
@@ -56,11 +49,11 @@ class CILogViewer
      * that's used by the library to present logs on the UI
      */
     private $LOG_VIEW_FILE_FOLDER = "";
-    private $LOG_VIEW_FILE_NAME = "logs.php";
+    private $LOG_VIEW_FILE_NAME = "dashboard.php";
     private $LOG_VIEW_FILE_PATH = "";
 
     //this is the name of the view file passed to CI load->view()
-    const CI_LOG_VIEW_FILE_PATH = "cilogviewer/logs";
+    const CI_LOG_VIEW_FILE_PATH = "beats/dashboard";
 
     const MAX_LOG_SIZE = 52428800; //50MB
     const MAX_STRING_LENGTH = 300; //300 chars
@@ -107,7 +100,7 @@ class CILogViewer
 
         //create the view file so that CI can find it
         //use VIEWPATH constant so the CI can find views location and this constant will be defined in index.php file.
-        $this->LOG_VIEW_FILE_FOLDER = VIEWPATH . "cilogviewer";
+        $this->LOG_VIEW_FILE_FOLDER = VIEWPATH . "beats";
         $this->LOG_VIEW_FILE_PATH = rtrim($this->LOG_VIEW_FILE_FOLDER) . "/" . $this->LOG_VIEW_FILE_NAME;
         if (!file_exists($this->LOG_VIEW_FILE_PATH)) {
 
@@ -127,8 +120,6 @@ class CILogViewer
      * */
     public function showLogs()
     {
-
-
         if (!is_null($this->CI->input->get("del"))) {
             $this->deleteFiles(base64_decode($this->CI->input->get("del")));
             redirect($this->CI->uri->uri_string());
@@ -184,6 +175,7 @@ class CILogViewer
         $data['logs'] = $logs;
         $data['files'] =  !empty($files) ? $files : [];
         $data['currentFile'] = !is_null($currentFile) ? basename($currentFile) : "";
+
         return $this->CI->load->view(self::CI_LOG_VIEW_FILE_PATH, $data, true);
     }
 

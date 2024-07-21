@@ -8,12 +8,10 @@ Beats provides quick insights into the performance and usage of your CI app. Tra
 composer require fasr/beats
 ```
 
-Migrate your database: 
-
-```bash
-php spark migrate --all
-```
-
 ## Docs
 
 Read the full [documentation](#docs)
+
+## Reference
+
+Inspired and made based on [Seun Matt](https://github.com/SeunMatt)
