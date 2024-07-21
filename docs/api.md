@@ -6,7 +6,7 @@ If you are developing an API service, powered by CodeIgniter, this library can s
 
 ## Use
 
-Query: ```/logs?api=list```
+Query: ```/beats?api=list```
 
 
 Response:
@@ -29,7 +29,7 @@ Response:
 
 file_b64 is the base64 encoded name of the file that will be used in further operations and API calls
 
-Query: ```/logs?api=viewf=bG9nLTIwMTgtMDEtMTcucGhw```
+Query: ```/beats?api=viewf=bG9nLTIwMTgtMDEtMTcucGhw```
     
 will return the logs contained in the log file specified by the f parameter.
 
@@ -60,7 +60,7 @@ Response:
 
 The API Query can also take one last parameter, sline that will determine how the logs are returned When it's true the logs are returned in a single line:
 
-Query: ```/logs?api=view&f=bG9nLTIwMTgtMDEtMTkucGhw&sline=true```
+Query: ```/beats?api=view&f=bG9nLTIwMTgtMDEtMTkucGhw&sline=true```
 
 Response:
 
@@ -83,7 +83,7 @@ Response:
 
 When it's false (Default), the logs are returned in as an array, where each element is a line in the log file:
 
-Query: ```/logs?api=view&f=bG9nLTIwMTgtMDEtMTkucGhw&sline=false OR logs?api=view&f=bG9nLTIwMTgtMDEtMTkucGhw```
+Query: ```/beats?api=view&f=bG9nLTIwMTgtMDEtMTkucGhw&sline=false OR logs?api=view&f=bG9nLTIwMTgtMDEtMTkucGhw```
 
 Response:
 
@@ -98,12 +98,12 @@ Response:
 }
 ```
 
-Query: ```/logs?api=delete&f=bG9nLTIwMTgtMDEtMTkucGhw``` 
+Query: ```/beats?api=delete&f=bG9nLTIwMTgtMDEtMTkucGhw``` 
 
 will delete a single log file. The f parameter is the base64 encoded name of the file and can be obtained from the view api above.
 
-Query: ```/logs?api=delete&f=all ```
+Query: ```/beats?api=delete&f=all ```
 
 will delete all log files in the configured folder path. Take note of the value for f which is the literal 'all'.
 
-IF A FILE IS TOO LARGE (> 50MB), YOU CAN DOWNLOAD IT WITH THIS API QUERY ```/logs?dl=bG9nLTIwMTgtMDEtMTcucGhw```
+IF A FILE IS TOO LARGE (> 50MB), YOU CAN DOWNLOAD IT WITH THIS API QUERY ```/beats?dl=bG9nLTIwMTgtMDEtMTcucGhw```
