@@ -1,0 +1,50 @@
+{
+  "name": "fasr/beats",
+  "description": "Beats provides quick insights into the performance and usage of your CI app. Track bottlenecks like slow jobs and endpoints and more.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "codeigniter",
+    "codeigniter4",
+    "beats",
+    "insights",
+    "track",
+    "logs"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Beats\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Francisco Rodrigues",
+      "email": "franciscosouzaacer@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/rodriguesfas/beats",
+  "support": {
+    "issues": "https://github.com/rodriguesfas/beats/issues",
+    "forum": "https://github.com/rodriguesfas/beats/discussions",
+    "source": "https://github.com/rodriguesfas/beats",
+    "docs": "https://rodriguesfas.github.io/beats/"
+  },
+  "require": {
+    "php": "^7.4.3 || ^8.0",
+    "codeigniter4/settings": "^2.1"
+  },
+  "require-dev": {
+    "codeigniter4/devkit": "^1.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "platform": {
+      "php": "8.0.30"
+    },
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
+}
