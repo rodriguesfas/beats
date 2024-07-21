@@ -5,7 +5,7 @@
   "license": "MIT",
   "keywords": [
     "codeigniter",
-    "codeigniter4",
+    "codeigniter3",
     "beats",
     "insights",
     "track",
@@ -31,20 +31,6 @@
     "docs": "https://rodriguesfas.github.io/beats/"
   },
   "require": {
-    "php": "^7.4.3 || ^8.0",
-    "codeigniter4/settings": "^2.1"
-  },
-  "require-dev": {
-    "codeigniter4/devkit": "^1.2"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "platform": {
-      "php": "8.0.30"
-    },
-    "allow-plugins": {
-      "phpstan/extension-installer": true
-    }
+    "php": ">=7.1"
   }
 }
